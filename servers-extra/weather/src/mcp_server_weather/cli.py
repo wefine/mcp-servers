@@ -7,7 +7,8 @@ import typer
 import logging
 import os
 from dotenv import load_dotenv
-from mcp_server_weather.server import mcp, HOST, PORT, AMAP_KEY
+from mcp_server_weather.server import mcp, HOST, PORT
+from mcp_server_weather.gaode_weather import AMAP_KEY
 
 app = typer.Typer(help="天气MCP服务器CLI")
 logger = logging.getLogger(__name__)
