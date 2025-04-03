@@ -5,7 +5,6 @@
 
 import typer
 import logging
-import os
 from dotenv import load_dotenv
 from mcp_server_weather.server import mcp, HOST, PORT
 from mcp_server_weather.gaode_weather import AMAP_KEY
