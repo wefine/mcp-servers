@@ -30,7 +30,9 @@ weather_api = GaodeWeatherAPI()
 
 # 从.env文件读取服务器配置
 HOST = os.environ.get("HOST", "localhost")
-PORT = int(os.environ.get("PORT", "8000"))
+# 确保当PORT为空时使用默认值
+port_value = os.environ.get("PORT", "")
+PORT = int(port_value) if port_value.strip() else 8000
 
 # 工具函数：获取实时天气
 @mcp.tool()
